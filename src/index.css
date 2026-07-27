@@ -124,3 +124,59 @@
   animation: shimmer 4s linear infinite;
 }
 
+/* Lata vine gentle sway — moves a little left and right continuously */
+@keyframes vine-sway {
+  0%   { transform: translateX(0px); }
+  50%  { transform: translateX(-8px); }
+  100% { transform: translateX(0px); }
+}
+
+.animate-vine-sway {
+  animation: vine-sway 2.5s ease-in-out infinite alternate;
+}
+
+/* Right side vine — flip baked into keyframes so animation doesn't override scaleX(-1) */
+@keyframes vine-sway-right-anim {
+  0%   { transform: scaleX(-1) translateX(0px); }
+  50%  { transform: scaleX(-1) translateX(-8px); }
+  100% { transform: scaleX(-1) translateX(0px); }
+}
+
+.animate-vine-sway-right {
+  animation: vine-sway-right-anim 2.5s ease-in-out infinite alternate;
+}
+
+/* Lata2 top-center hanging ivy — pendulum: top fixed, bottom swings */
+@keyframes lata2-sway {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(-6deg); }
+  100% { transform: rotate(6deg); }
+}
+
+.animate-lata2-sway {
+  transform-origin: top center;
+  animation: lata2-sway 3s ease-in-out infinite alternate;
+}
+
+/* Swan left — glides left + bobs */
+@keyframes swan-float-left {
+  0%   { transform: translateX(0px)  translateY(0px); }
+  50%  { transform: translateX(-18px) translateY(-8px); }
+  100% { transform: translateX(0px)  translateY(0px); }
+}
+
+/* Swan right — glides right + bobs (used inside scaleX(-1) wrapper so -X = right visually) */
+@keyframes swan-float-right {
+  0%   { transform: translateX(0px)  translateY(0px); }
+  50%  { transform: translateX(-18px) translateY(-8px); }
+  100% { transform: translateX(0px)  translateY(0px); }
+}
+
+/* Swan float — bobs up/down + drifts gently side to side */
+@keyframes swan-float {
+  0%   { transform: translateY(0px) translateX(0px); }
+  25%  { transform: translateY(-6px) translateX(-10px); }
+  50%  { transform: translateY(-10px) translateX(0px); }
+  75%  { transform: translateY(-6px) translateX(10px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
