@@ -33,42 +33,20 @@ export const VenueSection = () => {
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {VENUE_INFO.features.map((feature, idx) => (
-                <div
-                  key={idx}
-                  className="group relative p-5 rounded-2xl bg-white/50 backdrop-blur-lg border-2 border-white/80 shadow-[0_10px_25px_rgba(139,30,63,0.08),inset_0_0_15px_rgba(255,255,255,0.8)] hover:-translate-y-1.5 transition-all duration-300 hover:border-[#D4AF37] hover:bg-white/70 overflow-hidden"
-                >
-                  {/* Subtle Shimmer Light Line */}
-                  <div className="absolute -top-12 -left-12 w-24 h-24 bg-white/40 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500" />
-
-                  <h4 className="font-cinzel text-sm font-bold text-[#8B1E3F] mb-1.5 flex items-center justify-between">
-                    <span>{feature.title}</span>
-                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_#D4AF37]" />
+            <div className="space-y-4">
+              {VENUE_INFO.features.slice(0, 2).map((feature, idx) => (
+                <div key={idx} className="pb-3 border-b border-[#D4AF37]/30 last:border-0">
+                  <h4 className="font-cinzel text-base font-bold text-[#8B1E3F] mb-1">
+                    {feature.title}
                   </h4>
-                  <p className="font-poppins text-xs text-[#3A2E2A]/85 leading-relaxed">
+                  <p className="font-poppins text-sm text-[#3A2E2A]/85 leading-relaxed">
                     {feature.desc}
                   </p>
                 </div>
               ))}
             </div>
 
-            {/* Direct Contact Desk Glass Box */}
-            <div className="p-6 rounded-2xl bg-white/60 backdrop-blur-xl border-2 border-white/80 shadow-[0_12px_30px_rgba(139,30,63,0.1),inset_0_0_20px_rgba(255,255,255,0.9)]">
-              <h4 className="font-cinzel text-sm font-bold text-[#8B1E3F] mb-3 flex items-center space-x-2">
-                <span>Wedding Hospitality Desk</span>
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-poppins text-[#3A2E2A]">
-                <div className="flex items-center space-x-2.5 p-2.5 rounded-xl bg-white/40 border border-white/60">
-                  <Phone className="w-4 h-4 text-[#8B1E3F]" />
-                  <span className="font-medium">{VENUE_INFO.phone}</span>
-                </div>
-                <div className="flex items-center space-x-2.5 p-2.5 rounded-xl bg-white/40 border border-white/60">
-                  <Mail className="w-4 h-4 text-[#8B1E3F]" />
-                  <span className="font-medium">{VENUE_INFO.email}</span>
-                </div>
-              </div>
-            </div>
+
           </div>
 
           {/* Location & Google Map Box */}
@@ -114,41 +92,7 @@ export const VenueSection = () => {
               </div>
             </div>
 
-            {/* Nearby Lake Pichola Royal Landmarks (Matching Screenshot Pins) */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-              <div className="p-2.5 rounded-xl bg-white/60 backdrop-blur-md border border-white/80 shadow-xs text-center">
-                <span className="block font-cinzel text-[11px] font-bold text-[#8B1E3F]">
-                  The Leela Palace
-                </span>
-                <span className="font-poppins text-[10px] text-[#3A2E2A]/70">
-                  Primary Venue (West Lake)
-                </span>
-              </div>
-              <div className="p-2.5 rounded-xl bg-white/60 backdrop-blur-md border border-white/80 shadow-xs text-center">
-                <span className="block font-cinzel text-[11px] font-bold text-[#8B1E3F]">
-                  Ambrai Ghat
-                </span>
-                <span className="font-poppins text-[10px] text-[#3A2E2A]/70">
-                  0.4 km (Lakeside)
-                </span>
-              </div>
-              <div className="p-2.5 rounded-xl bg-white/60 backdrop-blur-md border border-white/80 shadow-xs text-center">
-                <span className="block font-cinzel text-[11px] font-bold text-[#8B1E3F]">
-                  City Palace
-                </span>
-                <span className="font-poppins text-[10px] text-[#3A2E2A]/70">
-                  0.8 km (East Shore)
-                </span>
-              </div>
-              <div className="p-2.5 rounded-xl bg-white/60 backdrop-blur-md border border-white/80 shadow-xs text-center">
-                <span className="block font-cinzel text-[11px] font-bold text-[#8B1E3F]">
-                  Jagdish Temple
-                </span>
-                <span className="font-poppins text-[10px] text-[#3A2E2A]/70">
-                  1.0 km (City Palace Rd)
-                </span>
-              </div>
-            </div>
+
 
             {/* Tactile Glossy Aqua Silver Button */}
             <div className="text-center pt-2">

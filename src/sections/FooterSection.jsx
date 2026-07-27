@@ -1,26 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { CurveDivider } from '../components/CurveDivider';
 import { COUPLE_DETAILS } from '../data/weddingData';
-import { Heart, Share2, Check } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 export const FooterSection = () => {
-  const [copied, setCopied] = useState(false);
-
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: 'Ananya & Rohan Royal Wedding Invitation',
-        text: 'You are cordially invited to celebrate the wedding of Ananya & Rohan in Udaipur!',
-        url: window.location.href,
-      }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(window.location.href);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
-    }
-  };
 
   return (
-    <footer className="bg-[#1E1215] text-[#FFF8EF] pt-16 pb-12 px-4 relative overflow-hidden border-t-2 border-[#D4AF37]">
+    <footer className="bg-[#1E1215] text-[#FFF8EF] pt-16 pb-12 px-4 relative overflow-hidden">
+      <CurveDivider position="top" fillColor="#FDF8F2" />
+      
       {/* Background Soft Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-xl h-32 bg-[#D4AF37]/10 blur-3xl pointer-events-none" />
 
@@ -42,16 +30,7 @@ export const FooterSection = () => {
           "With overflowing hearts and eternal gratitude for your presence in our lives."
         </p>
 
-        {/* Share Button */}
-        <div className="mb-10">
-          <button
-            onClick={handleShare}
-            className="inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37] text-[#D4AF37] font-cinzel text-xs font-bold tracking-wider hover:bg-[#D4AF37] hover:text-[#1E1215] transition-all"
-          >
-            {copied ? <Check className="w-4 h-4 text-green-400" /> : <Share2 className="w-4 h-4" />}
-            <span>{copied ? 'INVITATION LINK COPIED!' : 'SHARE ROYAL INVITATION'}</span>
-          </button>
-        </div>
+
 
         <div className="w-full h-[1px] bg-[#D4AF37]/30 my-8" />
 

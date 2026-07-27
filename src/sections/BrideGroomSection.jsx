@@ -1,7 +1,6 @@
 import React from 'react';
 import { COUPLE_DETAILS } from '../data/weddingData';
 import { SectionDivider } from '../components/SectionDivider';
-import { Instagram } from 'lucide-react';
 
 export const BrideGroomSection = () => {
   return (
@@ -64,15 +63,6 @@ export const BrideGroomSection = () => {
               "{COUPLE_DETAILS.bride.about}"
             </p>
 
-            <a
-              href={`https://instagram.com`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-[#8B1E3F]/10 text-[#8B1E3F] font-poppins text-xs font-medium hover:bg-[#8B1E3F] hover:text-[#FFF8EF] transition-colors"
-            >
-              <Instagram className="w-3.5 h-3.5" />
-              <span>{COUPLE_DETAILS.bride.instagram}</span>
-            </a>
           </div>
 
           {/* Groom */}
@@ -119,15 +109,6 @@ export const BrideGroomSection = () => {
               "{COUPLE_DETAILS.groom.about}"
             </p>
 
-            <a
-              href={`https://instagram.com`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-[#8B1E3F]/10 text-[#8B1E3F] font-poppins text-xs font-medium hover:bg-[#8B1E3F] hover:text-[#FFF8EF] transition-colors"
-            >
-              <Instagram className="w-3.5 h-3.5" />
-              <span>{COUPLE_DETAILS.groom.instagram}</span>
-            </a>
           </div>
         </div>
       </div>
