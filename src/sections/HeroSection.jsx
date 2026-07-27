@@ -15,7 +15,7 @@ export const HeroSection = ({ onOpenInvitation }) => {
       className="relative min-h-screen w-full flex flex-col items-center justify-center bg-[#FDF8F2] overflow-visible px-4 py-16"
     >
       {/* Background Arch Image stretched to cover the complete section and show every part */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-[1]">
         <img
           src={mobileViewers}
           alt="Royal Archway Background"
@@ -206,7 +206,7 @@ export const HeroSection = ({ onOpenInvitation }) => {
       </div>
 
       {/* Main Center Content Container */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center pointer-events-none">
         {/* Shubh Vivah Auspicious Mantra */}
         <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#8B1E3F]/10 backdrop-blur-md border border-[#8B1E3F]/30 text-[#8B1E3F] mb-6 shadow-sm">
           <span className="font-cinzel text-xs sm:text-sm font-bold tracking-widest uppercase">

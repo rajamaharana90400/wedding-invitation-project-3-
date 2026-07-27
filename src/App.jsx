@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 
 // Components
 import { FloatingPetals } from './components/FloatingPetals';
-import { BackToTop } from './components/BackToTop';
 
 // Sections
 import { LoadingScreen } from './sections/LoadingScreen';
@@ -101,8 +100,7 @@ export default function App() {
       {/* 15. Footer */}
       <FooterSection />
 
-      {/* Back to Top Floating Button */}
-      <BackToTop />
+
     </div>
   );
 }

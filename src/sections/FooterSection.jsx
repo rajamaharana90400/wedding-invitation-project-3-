@@ -38,8 +38,14 @@ export const FooterSection = () => {
           <p>© 2026 Ananya & Rohan Wedding Celebration. All Rights Reserved.</p>
           <p className="flex items-center space-x-1">
             <span>Crafted with</span>
-            <Heart className="w-3.5 h-3.5 text-[#8B1E3F] fill-[#8B1E3F]" />
-            <span>for a Royal Lifetime</span>
+            <a 
+              href="https://tekkzy.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#D4AF37] hover:text-white transition-colors font-semibold underline decoration-[#D4AF37]/50 underline-offset-4"
+            >
+              Tekkzy
+            </a>
           </p>
         </div>
       </div>

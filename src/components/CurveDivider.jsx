@@ -7,8 +7,8 @@ export const CurveDivider = ({
 }) => {
   return (
     <div 
-      className={`absolute left-0 w-full overflow-hidden leading-[0] ${
-        position === 'top' ? 'top-0 rotate-180' : 'bottom-0'
+      className={`absolute left-0 w-full overflow-hidden leading-[0] z-10 ${
+        position === 'top' ? '-top-[1px] rotate-180' : '-bottom-[1px]'
       } ${className}`}
       style={{ height: '60px' }}
     >

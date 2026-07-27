@@ -1,7 +1,7 @@
 import React from 'react';
 import { VENUE_INFO } from '../data/weddingData';
 import { SectionDivider } from '../components/SectionDivider';
-import { MapPin, Phone, Mail, Navigation, Sparkles, Building, Compass } from 'lucide-react';
+import { MapPin, Phone, Mail, Navigation, Sparkles, Building, Compass, Plane, Car } from 'lucide-react';
 
 export const VenueSection = () => {
   return (
@@ -33,13 +33,13 @@ export const VenueSection = () => {
               </h3>
             </div>
 
-            <div className="space-y-4">
+            <div className="flex flex-col gap-4 mt-4">
               {VENUE_INFO.features.slice(0, 2).map((feature, idx) => (
-                <div key={idx} className="pb-3 border-b border-[#D4AF37]/30 last:border-0">
-                  <h4 className="font-cinzel text-base font-bold text-[#8B1E3F] mb-1">
+                <div key={idx} className="p-4 rounded-xl bg-[#A67B5B] border border-[#D4AF37]/20 hover:bg-[#9c7151] transition-colors duration-300">
+                  <h4 className="font-cinzel text-base font-bold text-[#8B1E3F] mb-2 uppercase tracking-wide">
                     {feature.title}
                   </h4>
-                  <p className="font-poppins text-sm text-[#3A2E2A]/85 leading-relaxed">
+                  <p className="font-poppins text-xs text-[#3A2E2A]/90 leading-relaxed">
                     {feature.desc}
                   </p>
                 </div>

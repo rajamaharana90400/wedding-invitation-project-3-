@@ -3,7 +3,7 @@ import confetti from 'canvas-confetti';
 import { GoldFrame } from '../components/GoldFrame';
 import { INVITATION_MESSAGE } from '../data/weddingData';
 import { Sparkles } from 'lucide-react';
-import invitationCardsImg from '../assets/invitationcards.png';
+import invitationCardsImg from '../assets/invitationcardss.png';
 
 export const OpeningEnvelopeSection = ({
   isOpen,
