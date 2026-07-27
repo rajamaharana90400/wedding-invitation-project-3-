@@ -1,0 +1,6 @@
+{
+  "name": "Royal Indian Wedding Invitation",
+  "description": "A cinematic, interactive royal Indian wedding invitation experience with opening envelope, event details, countdown, love story timeline, venue map, and RSVP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
