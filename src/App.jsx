@@ -12,6 +12,8 @@ import { OpeningEnvelopeSection } from './sections/OpeningEnvelopeSection';
 import { BrideGroomSection } from './sections/BrideGroomSection';
 import { LoveStorySection } from './sections/LoveStorySection';
 import { WeddingEventsSection } from './sections/WeddingEventsSection';
+
+import { CurveAsymmetricalDivider } from './components/CurveAsymmetricalDivider';
 import { CountdownSection } from './sections/CountdownSection';
 import { GallerySection } from './sections/GallerySection';
 import { VenueSection } from './sections/VenueSection';
@@ -64,33 +66,42 @@ export default function App() {
       <main>
         {/* 2. Hero Section */}
         <HeroSection onOpenInvitation={handleOpenEnvelope} />
+        <div className="bg-[#FFF8EF]"><CurveAsymmetricalDivider fill="#FDF8F2" /></div>
 
         {/* 2.5. Wedding Star Scratch Card Section */}
         <StarScratchSection />
+        <div className="bg-[#F7E1D7]"><CurveAsymmetricalDivider fill="#FFF8EF" /></div>
 
         {/* 3 & 4. Opening Envelope & Invitation Letter Section */}
         <OpeningEnvelopeSection
           isOpen={isEnvelopeOpen}
           onToggleOpen={() => setIsEnvelopeOpen(!isEnvelopeOpen)}
         />
+        <div className="bg-[#FFF8EF]"><CurveAsymmetricalDivider fill="#F7E1D7" /></div>
 
         {/* 5. Bride & Groom Section */}
         <BrideGroomSection />
+        <div className="bg-[#F7E1D7]"><CurveAsymmetricalDivider fill="#FFF8EF" /></div>
 
         {/* 6. Love Story Timeline */}
         <LoveStorySection />
+        <div className="bg-[#FDF8F2]"><CurveAsymmetricalDivider fill="#F7E1D7" /></div>
 
         {/* 7. Wedding Events Ceremonies */}
         <WeddingEventsSection />
+        <div className="bg-[#F7E1D7]"><CurveAsymmetricalDivider fill="#FDF8F2" /></div>
 
         {/* 8. Countdown Timer */}
         <CountdownSection />
+        <div className="bg-[#FDF8F2]"><CurveAsymmetricalDivider fill="#F7E1D7" /></div>
 
         {/* 9. Photo Gallery */}
         <GallerySection />
+        <div className="bg-[#F7E1D7]"><CurveAsymmetricalDivider fill="#FDF8F2" /></div>
 
         {/* 11. Venue & Maps Section */}
         <VenueSection />
+        <div className="bg-[#FDF8F2]"><CurveAsymmetricalDivider fill="#F7E1D7" /></div>
 
         {/* 12. Gift Message */}
         <GiftMessageSection />

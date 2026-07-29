@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import openingVideo from '../assets/0728.mp4';
+const openingVideo = 'https://res.cloudinary.com/n0c7bqpd/video/upload/v1785327946/0728_qd0brk.mp4';
 
 export const LoadingScreen = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);

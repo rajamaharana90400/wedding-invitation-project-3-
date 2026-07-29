@@ -4,7 +4,7 @@ import { SectionDivider } from '../components/SectionDivider';
 
 export const BrideGroomSection = () => {
   return (
-    <section id="couple" className="py-20 px-4 bg-[#FDF8F2] relative overflow-hidden">
+    <section id="couple" className="py-20 px-4 bg-[#FFF8EF] relative overflow-hidden">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-14">

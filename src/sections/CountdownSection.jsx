@@ -7,7 +7,7 @@ import lowerSide from '../assets/lowerside.png';
 
 export const CountdownSection = () => {
   return (
-    <section id="countdown" className="py-24 px-4 bg-gradient-to-b from-[#FFF8EF] via-[#FDF3E7] to-[#FFF8EF] relative overflow-hidden text-center">
+    <section id="countdown" className="py-24 px-4 bg-[#F7E1D7] relative overflow-hidden text-center">
       {/* Lower Decorative Side Background Image */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden pointer-events-none z-0">
         <img 

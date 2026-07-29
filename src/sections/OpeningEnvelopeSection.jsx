@@ -30,7 +30,7 @@ export const OpeningEnvelopeSection = ({
   };
 
   return (
-    <section id="invitation" className="relative min-h-screen py-20 px-4 flex flex-col items-center justify-center bg-[#FFF8EF] overflow-hidden">
+    <section id="invitation" className="relative min-h-screen py-20 px-4 flex flex-col items-center justify-center bg-[#F7E1D7] overflow-hidden">
       {/* Background Mandala Watermark */}
       <div className="absolute w-[600px] h-[600px] opacity-5 pointer-events-none">
         <svg viewBox="0 0 200 200" className="w-full h-full fill-[#8B1E3F]">

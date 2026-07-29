@@ -5,7 +5,7 @@ import { MapPin, Sparkles, Heart } from 'lucide-react';
 
 export const LoveStorySection = () => {
   return (
-    <section id="story" className="py-24 px-4 bg-[#FFF8EF] relative">
+    <section id="story" className="py-24 px-4 bg-[#F7E1D7] relative">
       <div className="max-w-4xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-16">

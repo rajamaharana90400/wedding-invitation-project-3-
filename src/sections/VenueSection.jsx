@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail, Navigation, Sparkles, Building, Compass, Plane, Ca
 
 export const VenueSection = () => {
   return (
-    <section id="venue" className="py-24 px-4 bg-gradient-to-b from-[#FDF8F2] via-[#F8EFE3] to-[#FDF8F2] relative overflow-hidden">
+    <section id="venue" className="py-24 px-4 bg-[#F7E1D7] relative overflow-hidden">
       {/* Glossy Background Bubbles & Floating Orbs */}
       <div className="absolute top-10 left-8 w-32 h-32 rounded-full bg-gradient-to-br from-white/80 via-[#FFF3A7]/40 to-[#D4AF37]/20 backdrop-blur-md border border-white/60 shadow-[0_10px_30px_rgba(212,175,55,0.15),inset_0_0_15px_rgba(255,255,255,0.8)] pointer-events-none animate-bounce duration-[8s]" />
       <div className="absolute bottom-16 right-10 w-44 h-44 rounded-full bg-gradient-to-tr from-white/70 via-[#8B1E3F]/15 to-[#D4AF37]/20 backdrop-blur-lg border border-white/80 shadow-[0_15px_35px_rgba(139,30,63,0.15),inset_0_0_20px_rgba(255,255,255,0.9)] pointer-events-none animate-pulse duration-[6s]" />
