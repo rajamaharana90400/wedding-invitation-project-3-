@@ -26,7 +26,7 @@ export const OpeningEnvelopeSection = ({
 
     setTimeout(() => {
       setAnimating(false);
-    }, 1200);
+    }, 2000);
   };
 
   return (
@@ -56,7 +56,7 @@ export const OpeningEnvelopeSection = ({
             /* Premium Royal Velvet Box state */
             <div
               onClick={handleOpenClick}
-              className="group cursor-pointer relative w-full max-w-[600px] mx-auto aspect-[4/3] bg-gradient-to-br from-[#6A1128] via-[#8B1E3F] to-[#510A1D] rounded-lg border-[6px] border-[#D4AF37] shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-6 sm:p-10 flex flex-col items-center justify-center transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_30px_60px_rgba(0,0,0,0.6)] overflow-hidden"
+              className="group cursor-pointer relative w-full max-w-[600px] mx-auto aspect-[4/3] bg-gradient-to-br from-[#6A1128] via-[#8B1E3F] to-[#510A1D] rounded-lg border-[6px] border-[#D4AF37] shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-6 sm:p-10 flex flex-col items-center justify-center transition-all duration-1500 hover:scale-[1.02] hover:shadow-[0_30px_60px_rgba(0,0,0,0.6)] overflow-hidden"
             >
               {/* Subtle inner velvet texture/glow */}
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.1)_0%,_rgba(0,0,0,0.4)_100%)] pointer-events-none" />
@@ -73,7 +73,7 @@ export const OpeningEnvelopeSection = ({
 
               {/* Royal Wax Seal / Gold Medallion */}
               <div className="relative z-20 flex flex-col items-center">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-[#B8860B] via-[#FFD700] to-[#D4AF37] border-[3px] border-[#FFF8EF]/20 shadow-[0_10px_25px_rgba(0,0,0,0.5)] flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500 hover:rotate-3">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-[#B8860B] via-[#FFD700] to-[#D4AF37] border-[3px] border-[#FFF8EF]/20 shadow-[0_10px_25px_rgba(0,0,0,0.5)] flex items-center justify-center transform group-hover:scale-110 transition-transform duration-1500 hover:rotate-3">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-[#8B1E3F]/30 flex flex-col items-center justify-center bg-gradient-to-br from-[#FFDF00] to-[#DAA520]">
                     <span className="font-great-vibes text-4xl sm:text-5xl font-bold text-[#8B1E3F] drop-shadow-sm block leading-none">A&R</span>
                   </div>
