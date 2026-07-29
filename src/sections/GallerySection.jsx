@@ -1,38 +1,120 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { GALLERY_IMAGES } from '../data/weddingData';
 import { SectionDivider } from '../components/SectionDivider';
-import DomeGallery from '../components/DomeGallery';
+import { MasonryGallery } from '../components/MasonryGallery';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const GallerySection = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Map our gallery images to MasonryItem format with deterministic heights
+  const masonryItems = useMemo(() => {
+    const heights = [400, 250, 600, 350, 500, 300, 450, 280, 550, 320];
+    return GALLERY_IMAGES.map((img, idx) => ({
+      id: img.id,
+      img: img.url,
+      title: img.title,
+      caption: img.caption,
+      height: heights[idx % heights.length]
+    }));
+  }, []);
+
+  const openLightbox = (index) => {
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+    // Prevent scrolling when lightbox is open
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+
+  const showNext = (e) => {
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev === GALLERY_IMAGES.length - 1 ? 0 : prev + 1));
+  };
+
+  const showPrev = (e) => {
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev === 0 ? GALLERY_IMAGES.length - 1 : prev - 1));
+  };
+
   return (
-    <section id="gallery" className="py-20 px-4 bg-[#FDF8F2] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section id="gallery" className="py-24 px-4 bg-[#FDF8F2] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-16">
           <span className="font-cinzel text-xs font-bold tracking-[0.3em] text-[#AA771C] uppercase block mb-2">
             Capturing Royal Moments
           </span>
           <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold text-[#8B1E3F]">
             Photo Gallery
           </h2>
-          <SectionDivider type="vine" />
+          <div className="mt-4">
+             <SectionDivider type="vine" />
+          </div>
         </div>
 
-        {/* 3D Dome Showcase View */}
-        <div className="relative w-full h-[520px] sm:h-[600px] rounded-3xl bg-[#FFF8EF] border-2 border-[#D4AF37] shadow-[0_20px_50px_rgba(139,30,63,0.15)] overflow-hidden transition-all duration-500">
-            {/* Hint Banner */}
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 px-4 py-1.5 rounded-full bg-[#8B1E3F]/90 text-[#FFF8EF] text-[11px] sm:text-xs font-poppins font-medium tracking-wide shadow-md border border-[#D4AF37]/60 backdrop-blur-xs flex items-center space-x-2 pointer-events-none">
-              <span>✨</span>
-              <span>Drag around to explore the immersive dome gallery</span>
-            </div>
-
-            <DomeGallery
-              images={GALLERY_IMAGES.map(img => ({ src: img.url, alt: img.title }))}
-              grayscale={false}
-              overlayBlurColor="#FFF8EF"
-            />
-          </div>
+        {/* GSAP Masonry Gallery */}
+        <MasonryGallery 
+          items={masonryItems}
+          animateFrom="bottom"
+          blurToFocus={true}
+          stagger={0.08}
+          scaleOnHover={true}
+          hoverScale={0.96}
+          colorShiftOnHover={true}
+          onItemClick={openLightbox}
+        />
       </div>
+
+      {/* Lightbox Modal */}
+      {lightboxOpen && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm touch-none"
+          onClick={closeLightbox}
+        >
+          <button 
+            className="absolute top-4 right-4 sm:top-8 sm:right-8 p-2 rounded-full bg-black/50 text-white hover:bg-[#8B1E3F] transition-colors"
+            onClick={closeLightbox}
+          >
+            <X className="w-6 h-6 sm:w-8 sm:h-8" />
+          </button>
+          
+          <button 
+            className="absolute left-2 sm:left-8 p-3 rounded-full bg-black/50 text-white hover:bg-[#8B1E3F] transition-colors"
+            onClick={showPrev}
+          >
+            <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
+          </button>
+          
+          <div className="w-full max-w-5xl max-h-[85vh] flex flex-col items-center justify-center px-16 relative" onClick={(e) => e.stopPropagation()}>
+            <img 
+              src={GALLERY_IMAGES[currentIndex].url} 
+              alt={GALLERY_IMAGES[currentIndex].title}
+              className="max-w-full max-h-[75vh] object-contain rounded-lg border border-[#D4AF37]/30 shadow-[0_0_50px_rgba(212,175,55,0.1)]"
+            />
+            
+            <div className="mt-6 text-center">
+               <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-[#D4AF37] mb-1">{GALLERY_IMAGES[currentIndex].title}</h3>
+               <p className="font-poppins text-sm text-[#FDF8F2]/70">{GALLERY_IMAGES[currentIndex].caption}</p>
+               <div className="mt-2 text-xs font-cinzel text-[#D4AF37]/50 tracking-widest">
+                 {currentIndex + 1} / {GALLERY_IMAGES.length}
+               </div>
+            </div>
+          </div>
+          
+          <button 
+            className="absolute right-2 sm:right-8 p-3 rounded-full bg-black/50 text-white hover:bg-[#8B1E3F] transition-colors"
+            onClick={showNext}
+          >
+            <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
+          </button>
+        </div>
+      )}
     </section>
   );
 };

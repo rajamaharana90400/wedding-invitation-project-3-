@@ -180,3 +180,41 @@
   75%  { transform: translateY(-6px) translateX(10px); }
   100% { transform: translateY(0px) translateX(0px); }
 }
+
+/* Morphing Blob Shapes */
+@keyframes blob-float-1 {
+  0%, 100% { border-radius: 45% 55% 40% 60% / 55% 45% 60% 40%; transform: translateY(0); }
+  50% { border-radius: 60% 40% 50% 50% / 40% 50% 50% 60%; transform: translateY(-8px); }
+}
+
+@keyframes blob-float-2 {
+  0%, 100% { border-radius: 50% 50% 35% 65% / 60% 40% 60% 40%; transform: translateY(0); }
+  50% { border-radius: 40% 60% 60% 40% / 50% 55% 45% 50%; transform: translateY(-10px); }
+}
+
+@keyframes blob-float-3 {
+  0%, 100% { border-radius: 55% 45% 50% 50% / 45% 60% 40% 55%; transform: translateY(0); }
+  50% { border-radius: 50% 50% 60% 40% / 40% 50% 50% 60%; transform: translateY(-6px); }
+}
+
+.animate-blob-1 {
+  animation: blob-float-1 4s ease-in-out infinite;
+}
+
+.animate-blob-2 {
+  animation: blob-float-2 5s ease-in-out infinite;
+}
+
+.animate-blob-3 {
+  animation: blob-float-3 4.5s ease-in-out infinite;
+}
+
+@keyframes march {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
+
+.animate-march {
+  animation: march 0.8s linear infinite;
+}
