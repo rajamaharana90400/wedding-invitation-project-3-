@@ -17,18 +17,9 @@ export const CountdownSection = () => {
         />
       </div>
 
-      {/* Ambient Floating Orbs */}
-      <div className="absolute top-10 left-12 w-36 h-36 rounded-full bg-gradient-to-br from-white/80 via-[#FFF3A7]/30 to-[#D4AF37]/20 backdrop-blur-md border border-white/70 pointer-events-none animate-pulse duration-[7s]" />
-      <div className="absolute top-1/3 right-10 w-44 h-44 rounded-full bg-gradient-to-tr from-white/70 via-[#8B1E3F]/15 to-[#D4AF37]/25 backdrop-blur-lg border border-white/80 pointer-events-none animate-bounce duration-[9s]" />
+      {/* Ambient Floating Orbs removed per user request */}
 
-      {/* Background Mandala Watermark */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-10 pointer-events-none animate-spin-slow z-1">
-        <svg viewBox="0 0 200 200" className="w-full h-full stroke-[#D4AF37] fill-none stroke-[1]">
-          <circle cx="100" cy="100" r="90" strokeDasharray="3 3" />
-          <circle cx="100" cy="100" r="70" />
-          <circle cx="100" cy="100" r="50" />
-        </svg>
-      </div>
+      {/* Background Mandala Watermark removed per user request */}
 
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/60 backdrop-blur-md border border-[#D4AF37]/40 shadow-xs mb-3">

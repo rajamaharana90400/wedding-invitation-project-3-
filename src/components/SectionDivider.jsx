@@ -30,9 +30,7 @@ export const SectionDivider = ({ type = 'mandala', className = '' }) => {
 
         {type === 'peacock' && (
           <div className="flex items-center space-x-2">
-            <span className="text-xl">🪶</span>
             <span className="text-2xl font-great-vibes text-[#8B1E3F]">✦</span>
-            <span className="text-xl transform -scale-x-100">🪶</span>
           </div>
         )}
 

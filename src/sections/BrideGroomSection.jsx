@@ -41,7 +41,6 @@ export const BrideGroomSection = () => {
 
               {/* Royal Badge at Bottom */}
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#8B1E3F] to-[#A82848] text-[#D4AF37] border border-[#D4AF37] text-[10px] sm:text-xs font-cinzel font-bold tracking-widest shadow-lg flex items-center gap-1 whitespace-nowrap">
-                <span>👑</span>
                 <span>THE BRIDE</span>
               </div>
             </div>
@@ -53,7 +52,7 @@ export const BrideGroomSection = () => {
             <p className="font-poppins text-xs font-semibold text-[#8B1E3F]/80 mb-1">
               {COUPLE_DETAILS.bride.parents}
             </p>
-            <p className="font-poppins text-[11px] text-[#3A2E2A]/70 mb-4">
+            <p className="font-poppins font-bold text-[11px] text-[#3A2E2A]/70 mb-4">
               {COUPLE_DETAILS.bride.grandparents}
             </p>
 
@@ -87,7 +86,6 @@ export const BrideGroomSection = () => {
 
               {/* Royal Badge at Bottom */}
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#8B1E3F] to-[#A82848] text-[#D4AF37] border border-[#D4AF37] text-[10px] sm:text-xs font-cinzel font-bold tracking-widest shadow-lg flex items-center gap-1 whitespace-nowrap">
-                <span>👑</span>
                 <span>THE GROOM</span>
               </div>
             </div>
@@ -99,7 +97,7 @@ export const BrideGroomSection = () => {
             <p className="font-poppins text-xs font-semibold text-[#8B1E3F]/80 mb-1">
               {COUPLE_DETAILS.groom.parents}
             </p>
-            <p className="font-poppins text-[11px] text-[#3A2E2A]/70 mb-4">
+            <p className="font-poppins font-bold text-[11px] text-[#3A2E2A]/70 mb-4">
               {COUPLE_DETAILS.groom.grandparents}
             </p>
 

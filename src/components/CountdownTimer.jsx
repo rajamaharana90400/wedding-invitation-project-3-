@@ -47,29 +47,18 @@ export const CountdownTimer = ({ targetDate }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            {/* Outer Circular Medallion with Framer Motion hover & tap animations */}
+            {/* Transparent Container with Framer Motion hover & tap animations */}
             <motion.div
-              className="relative w-20 h-20 xs:w-24 xs:h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full p-1.5 sm:p-2.5 bg-gradient-to-tr from-[#D4AF37] via-[#FFF3A7] to-[#8B1E3F] shadow-[0_10px_30px_rgba(139,30,63,0.18)] flex items-center justify-center"
+              className="relative flex flex-col items-center justify-center py-4 px-6 min-w-[80px] sm:min-w-[120px]"
               whileHover={{
                 scale: 1.08,
-                y: -6,
-                boxShadow: "0 20px 40px rgba(139, 30, 63, 0.35), 0 0 30px rgba(212, 175, 55, 0.6)"
+                y: -6
               }}
               whileTap={{ scale: 0.96 }}
               transition={{ type: "spring", stiffness: 350, damping: 20 }}
             >
-              {/* Inner White Glass Circular Core */}
-              <div className="w-full h-full rounded-full bg-gradient-to-b from-white via-[#FFFDF9] to-[#FFF5E8] border border-white/90 flex flex-col items-center justify-center relative overflow-hidden shadow-inner">
-                
-                {/* Rotating Dotted Filigree Ring on Hover */}
-                <motion.div
-                  className="absolute inset-1 sm:inset-1.5 rounded-full border border-dashed border-[#D4AF37]/60 pointer-events-none"
-                  whileHover={{ rotate: 180 }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
-                />
-
-                {/* Shimmer Light Reflection effect */}
-                <div className="absolute -top-8 -left-8 w-16 h-16 sm:w-24 sm:h-24 bg-white/60 rounded-full blur-md group-hover:scale-150 transition-transform duration-700 pointer-events-none" />
+              {/* Inner Content Container without backgrounds */}
+              <div className="w-full h-full flex flex-col items-center justify-center relative">
 
                 {/* Top Badge Icon */}
                 <motion.div

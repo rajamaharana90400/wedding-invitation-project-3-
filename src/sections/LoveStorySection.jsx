@@ -15,7 +15,7 @@ export const LoveStorySection = () => {
           <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold text-[#8B1E3F]">
             The Love Story
           </h2>
-          <p className="font-poppins text-xs sm:text-sm text-[#3A2E2A]/70 mt-3 max-w-md mx-auto italic">
+          <p className="font-poppins font-bold text-xs sm:text-sm text-[#3A2E2A]/70 mt-3 max-w-md mx-auto italic">
             Scroll down to watch our chapters stack smoothly like a royal deck of memories
           </p>
           <SectionDivider type="peacock" />

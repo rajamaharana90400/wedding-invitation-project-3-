@@ -131,21 +131,15 @@ const SingleStarScratchCard = ({
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
-    ctx.fillStyle = '#610B0B';
-    ctx.font = 'bold 9px "Noto Sans Devanagari", sans-serif';
-    ctx.fillText(`॥ ${item.label} ॥`, cx, cy - outerRadius * 0.38);
-
     ctx.fillStyle = '#8B0000';
     ctx.font = 'bold 12px "Playfair Display", Georgia, serif';
-    ctx.fillText('✨ SCRATCH ✨', cx, cy - 4);
+    ctx.fillText('SCRATCH', cx, cy - 4);
 
     ctx.fillStyle = '#4A1D1A';
     ctx.font = '600 10px "Poppins", sans-serif';
     ctx.fillText(`Star ${item.serialNumber}`, cx, cy + 12);
 
-    ctx.fillStyle = '#8B0000';
-    ctx.font = '500 8.5px "Poppins", sans-serif';
-    ctx.fillText('Touch to reveal', cx, cy + 25);
+
 
     setScratchPercent(0);
     setIsRevealed(false);
